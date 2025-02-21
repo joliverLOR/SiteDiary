@@ -3,6 +3,7 @@ using System.Runtime.InteropServices.Marshalling;
 using DailyDiary;
 using DBConnect;
 using MainConsole;
+using Microsoft.EntityFrameworkCore;
 
 namespace MainConsole;
 
@@ -11,6 +12,7 @@ public class DiaryLogic
     // Diary siteDiary = new MajorConstructionDiary(1, DateTime.Now, "Manchester", "Excavation", DateTime.Now, DateTime.Now);
     //Console.WriteLine(siteDiary.toString());
     DiaryEntry diary = null;
+    SiteDiaryContext createDiaryEntry = new SiteDiaryContext();
     // DiaryOptions options = new DiaryOptions();
     int idCount = 0;
 
@@ -76,7 +78,32 @@ public class DiaryLogic
                 switch (response)
                 {
                     case "1":
-                        diary = DiaryFactory.Create(DiaryMethod.MajorConstructionDiary, idCount);
+                        //diary = DiaryFactory.Create(DiaryMethod.MajorConstructionDiary, idCount);
+                        diary = DiaryOptions.MajorDiaryOption();
+
+                        createDiaryEntry.Add(diary);
+                        int success = createDiaryEntry.SaveChanges();
+                        try 
+                            {   
+                                if(success == 1) {
+                                    Console.WriteLine("Success");
+                                } else {
+                                    Console.WriteLine("Not successful");
+                                }
+
+                            } catch (DbUpdateException ex)
+                            {
+                                Console.WriteLine($"Database update failed: {ex.InnerException?.Message}");
+                            }
+                            catch (InvalidOperationException ex)
+                            {
+                                Console.WriteLine($"Invalid operation: {ex.Message}");
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine($"An error occurred: {ex.Message}");
+                            }
+
                         break;
                     case "2":
                         //diary = DiaryFactory.Create(DiaryMethod.ContractorsOnSite, idCount);
@@ -99,6 +126,9 @@ public class DiaryLogic
                 }
             } while (flag);
 
+
+
+        
         Console.WriteLine(diary.ToString());
 
     }
