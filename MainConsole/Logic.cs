@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices.Marshalling;
 using DailyDiary;
+using DBConnect;
 using MainConsole;
 
 namespace MainConsole;
@@ -9,7 +10,7 @@ public class DiaryLogic
 {
     // Diary siteDiary = new MajorConstructionDiary(1, DateTime.Now, "Manchester", "Excavation", DateTime.Now, DateTime.Now);
     //Console.WriteLine(siteDiary.toString());
-    Diary diary = null;
+    DiaryEntry diary = null;
     // DiaryOptions options = new DiaryOptions();
     int idCount = 0;
 
@@ -75,19 +76,19 @@ public class DiaryLogic
                 switch (response)
                 {
                     case "1":
-                        diary = DiaryFactory.Create(DiaryMethod.MajorDiary, idCount);
+                        diary = DiaryFactory.Create(DiaryMethod.MajorConstructionDiary, idCount);
                         break;
                     case "2":
-                        diary = DiaryFactory.Create(DiaryMethod.ContractorsOnSite, idCount);
+                        //diary = DiaryFactory.Create(DiaryMethod.ContractorsOnSite, idCount);
                         break;
                     case "3":
-                        diary = DiaryFactory.Create(DiaryMethod.Discussions, idCount);
+                        //diary = DiaryFactory.Create(DiaryMethod.Discussions, idCount);
                         break;
                     case "4":
-                        diary = DiaryFactory.Create(DiaryMethod.Deliveries, idCount);
+                        //diary = DiaryFactory.Create(DiaryMethod.Deliveries, idCount);
                         break;
                     case "5":
-                        diary = DiaryFactory.Create(DiaryMethod.Plant, idCount);
+                        //diary = DiaryFactory.Create(DiaryMethod.Plant, idCount);
                         break;
                     case "q":
                         flag = false;

@@ -2,7 +2,7 @@ namespace DailyDiary {
     
     public enum DiaryMethod
     {
-        MajorDiary,
+        MajorConstructionDiary = 1,
         Discussions,
         ContractorsOnSite,
         Deliveries,
