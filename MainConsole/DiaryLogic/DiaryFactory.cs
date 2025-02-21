@@ -12,9 +12,9 @@ public class DiaryFactory
         switch(diaryType)
         {
             case DiaryMethod.MajorConstructionDiary:
-                return DiaryOptions.MajorDiaryOption(id);
+                return DiaryOptions.MajorDiaryOption();
             case DiaryMethod.Discussions:
-                return DiaryOptions.DiscussionOption(id);
+                return DiaryOptions.DiscussionOption();
             default:
                 throw new NotSupportedException(
                     $"Not supported type {diaryType}"

@@ -1,6 +1,0 @@
-C:\Users\JackOliver\Documents\Code\C#\SiteDiary\EFCoreAccess\obj\Debug\net9.0\EFCoreAccess.csproj.AssemblyReference.cache
-C:\Users\JackOliver\Documents\Code\C#\SiteDiary\EFCoreAccess\obj\Debug\net9.0\EFCoreAccess.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\JackOliver\Documents\Code\C#\SiteDiary\EFCoreAccess\obj\Debug\net9.0\EFCoreAccess.AssemblyInfoInputs.cache
-C:\Users\JackOliver\Documents\Code\C#\SiteDiary\EFCoreAccess\obj\Debug\net9.0\EFCoreAccess.AssemblyInfo.cs
-C:\Users\JackOliver\Documents\Code\C#\SiteDiary\EFCoreAccess\obj\Debug\net9.0\EFCoreAccess.csproj.CoreCompileInputs.cache
-C:\Users\JackOliver\Documents\Code\C#\SiteDiary\EFCoreAccess\obj\Debug\net9.0\EFCoreAccess.sourcelink.json

@@ -9,8 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DBConnect\DBConnect\DBConnect.csproj" />
-    <ProjectReference Include="..\EFCoreAccess\Database.csproj" />
-    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\Utils\Utils.csproj" />
   </ItemGroup>
 
 </Project>

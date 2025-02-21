@@ -6,9 +6,9 @@ public static class DiaryOptions
     // Set org is to equal 1 untill db connected
     private static int organisationId = 1;
 
-    public static DiaryEntry MajorDiaryOption(int id) 
+    public static DiaryEntry MajorDiaryOption() 
     {
-        string location, activity, org, packages, trade;
+        string location, activity, organisation, packages, trade;
         DateTime startTime, endTime;
 
         Console.WriteLine("Enter Start Date");
@@ -31,12 +31,14 @@ public static class DiaryOptions
         Console.WriteLine("Enter activity");
         activity = Console.ReadLine();
 
+        // Console.WriteLine("Enter organisation");
+        // organisation = Console.ReadLine();
+
           return new DiaryEntry
         {
-            DiaryId = id,
             LogTypeId = (int) DiaryMethod.MajorConstructionDiary,    // Major diary type ID
-            //ProjectId = projectId,
-            // StaffId = staffId,
+            ProjectId = 1,
+            StaffId = 1,
             OrganisationId = organisationId,
             Created = DateTime.UtcNow,
             FromDatetime = startTime,
@@ -47,7 +49,7 @@ public static class DiaryOptions
         };
     }
 
-    public static DiaryEntry DiscussionOption(int id) 
+    public static DiaryEntry DiscussionOption() 
     {
         string location, details;
         DateTime startTime, endTime;
@@ -72,10 +74,9 @@ public static class DiaryOptions
 
          return new DiaryEntry
         {
-            DiaryId = id,
             LogTypeId = (int) DiaryMethod.Discussions,   // Discussion log type ID
-            // ProjectId = projectId,
-            // StaffId = staffId,
+            ProjectId = 1,
+            StaffId = 1,
             OrganisationId = organisationId,
             Created = DateTime.UtcNow,
             FromDatetime = startTime,

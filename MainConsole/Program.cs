@@ -11,7 +11,5 @@ class Program
         DiaryLogic logic = new DiaryLogic();
 
         logic.SelectMenu();
-
-
     }
 }

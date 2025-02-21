@@ -859,20 +859,6 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "Database/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.2",
-          "Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Database.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Database.dll": {}
-        }
-      },
       "DBConnect/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -886,19 +872,6 @@
         },
         "runtime": {
           "bin/placeholder/DBConnect.dll": {}
-        }
-      },
-      "Models/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Utils": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Models.dll": {}
         }
       },
       "Utils/1.0.0": {
@@ -2188,20 +2161,10 @@
         "version.txt"
       ]
     },
-    "Database/1.0.0": {
-      "type": "project",
-      "path": "../EFCoreAccess/Database.csproj",
-      "msbuildProject": "../EFCoreAccess/Database.csproj"
-    },
     "DBConnect/1.0.0": {
       "type": "project",
       "path": "../DBConnect/DBConnect/DBConnect.csproj",
       "msbuildProject": "../DBConnect/DBConnect/DBConnect.csproj"
-    },
-    "Models/1.0.0": {
-      "type": "project",
-      "path": "../Models/Models.csproj",
-      "msbuildProject": "../Models/Models.csproj"
     },
     "Utils/1.0.0": {
       "type": "project",
@@ -2212,8 +2175,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "DBConnect >= 1.0.0",
-      "Database >= 1.0.0",
-      "Models >= 1.0.0"
+      "Utils >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2244,11 +2206,8 @@
             "C:\\Users\\JackOliver\\Documents\\Code\\C#\\SiteDiary\\DBConnect\\DBConnect\\DBConnect.csproj": {
               "projectPath": "C:\\Users\\JackOliver\\Documents\\Code\\C#\\SiteDiary\\DBConnect\\DBConnect\\DBConnect.csproj"
             },
-            "C:\\Users\\JackOliver\\Documents\\Code\\C#\\SiteDiary\\EFCoreAccess\\Database.csproj": {
-              "projectPath": "C:\\Users\\JackOliver\\Documents\\Code\\C#\\SiteDiary\\EFCoreAccess\\Database.csproj"
-            },
-            "C:\\Users\\JackOliver\\Documents\\Code\\C#\\SiteDiary\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\JackOliver\\Documents\\Code\\C#\\SiteDiary\\Models\\Models.csproj"
+            "C:\\Users\\JackOliver\\Documents\\Code\\C#\\SiteDiary\\Utils\\Utils.csproj": {
+              "projectPath": "C:\\Users\\JackOliver\\Documents\\Code\\C#\\SiteDiary\\Utils\\Utils.csproj"
             }
           }
         }
